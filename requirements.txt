@@ -1,3 +1,6 @@
 discord.py
-python-dotenv
+nextcord
 requests
+aiohttp
+python-dotenv
+pytz
