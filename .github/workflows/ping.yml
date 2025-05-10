@@ -1,0 +1,12 @@
+name: Keep Replit Alive
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # Envía ping cada 5 minutos
+  workflow_dispatch:  # Permite ejecución manual
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Replit
+        run: curl -s -X GET "https://49ef3037-71cc-4a8c-8f86-a09cf1b9841f-00-2mqv3rh0lrj57.picard.replit.dev/" > /dev/null
